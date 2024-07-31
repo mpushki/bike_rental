@@ -5,8 +5,9 @@ from .models import Account
 
 class AccountAdmin(UserAdmin):
     list_display = (
-        'username', 'name', 'email'
+        'name', 'email'
         )
+    ordering = ["email"]
     
     fieldsets = [
         ["User additional data", {"fields": ["id", "name"]}],
