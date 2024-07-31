@@ -4,3 +4,4 @@
  - Django
  - Postgres
  - Docker
+ - JWT Token
