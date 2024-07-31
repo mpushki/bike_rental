@@ -22,16 +22,16 @@ from rest_framework import permissions
 
 
 schema_view = get_schema_view(
-   openapi.Info(
-      title="Bikes rental API",
-      default_version='v1',
-      description="Test task",
-      terms_of_service="hhttps://github.com/mpushki",
-      contact=openapi.Contact(email="mariia.pushkina@gmail.com"),
-      license=openapi.License(name="BSD License"),
-   ),
-   public=True,
-   permission_classes=(permissions.AllowAny,),
+    openapi.Info(
+        title="Bikes rental API",
+        default_version='v1',
+        description="Test task",
+        terms_of_service="hhttps://github.com/mpushki",
+        contact=openapi.Contact(email="mariia.pushkina@gmail.com"),
+        license=openapi.License(name="BSD License"),
+    ),
+    public=True,
+    permission_classes=(permissions.AllowAny,),
 )
 
 urlpatterns = [

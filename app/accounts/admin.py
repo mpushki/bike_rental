@@ -3,12 +3,13 @@ from django.contrib.auth.admin import UserAdmin
 
 from .models import Account
 
+
 class AccountAdmin(UserAdmin):
     list_display = (
         'name', 'email'
-        )
+    )
     ordering = ["email"]
-    
+
     fieldsets = [
         ["User additional data", {"fields": ["id", "name"]}],
         [
@@ -24,5 +25,6 @@ class AccountAdmin(UserAdmin):
         ],
         ["Authenticated", {"fields": ["email", "password1", "password2"]}],
     ]
+
 
 admin.site.register(Account, AccountAdmin)

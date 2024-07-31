@@ -2,7 +2,6 @@ from rest_framework import generics
 from rest_framework import status
 from .models import Account
 from .serializers import AccountSerializer
-from rest_framework.decorators import permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
@@ -20,7 +19,8 @@ class SignupView(generics.CreateAPIView):
             serializer.data, status=status.HTTP_201_CREATED, headers=headers
         )
 
+
 class AccountUpdateView(generics.UpdateAPIView):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
-    #permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
