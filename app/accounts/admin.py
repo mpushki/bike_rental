@@ -11,19 +11,12 @@ class AccountAdmin(UserAdmin):
     ordering = ["email"]
 
     fieldsets = [
-        ["User additional data", {"fields": ["name"]}],
-        [
-            "Authorization",
-            {"fields": ["is_superuser", "groups", "user_permissions"]},
-        ],
-        ["Authentication", {"fields": ["email", "password"]}],
+        ["Personal info", {"fields": ["name"]}],
+        ["Permissions", {"fields": ["is_superuser", "groups", "user_permissions"]}],
+        [None, {"fields": ["email", "password"]}],
     ]
     add_fieldsets = [
-        [
-            "Authorization",
-            {"fields": ["is_superuser", "groups", "user_permissions"]},
-        ],
-        ["Authenticated", {"fields": ["email", "password1", "password2"]}],
+        [None, {"fields": ["email", "password1", "password2"]}],
     ]
 
 
