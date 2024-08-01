@@ -3,6 +3,6 @@ from bikes.models import Bike
 
 
 @admin.register(Bike)
-class BicycleAdmin(admin.ModelAdmin):
+class BikeAdmin(admin.ModelAdmin):
     list_display = ('id', 'model', 'price', 'rent_is')
     search_fields = ('model',)

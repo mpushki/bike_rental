@@ -3,7 +3,7 @@ from bikes.views import BikeListAPIView, AvailableBikeListAPIView
 
 urlpatterns = [
     path(
-        'bikes/',
+        '',
         BikeListAPIView.as_view(),
         name='bike_list',
     ),

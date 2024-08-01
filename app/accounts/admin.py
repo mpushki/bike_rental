@@ -11,7 +11,7 @@ class AccountAdmin(UserAdmin):
     ordering = ["email"]
 
     fieldsets = [
-        ["User additional data", {"fields": ["id", "name"]}],
+        ["User additional data", {"fields": ["name"]}],
         [
             "Authorization",
             {"fields": ["is_superuser", "groups", "user_permissions"]},
